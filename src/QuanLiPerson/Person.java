@@ -1,4 +1,4 @@
-package QuanLi;
+package QuanLiPerson;
 
 public class Person {
     private int id ;

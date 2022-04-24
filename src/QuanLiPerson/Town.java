@@ -1,10 +1,16 @@
-package QuanLi;
+package QuanLiPerson;
+
+import TrumManage.Management;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Town implements Manage<Family> {
-    private List<Family> familyList = new ArrayList<>();
+public class Town implements Management< Family> {
+    private List<Family>familyList = new ArrayList<>();
+
+    public Town(List<Family> familyList) {
+        this.familyList = familyList;
+    }
 
     public Town() {
     }
@@ -27,25 +33,27 @@ public class Town implements Manage<Family> {
 
     @Override
     public void display() {
-
-        for (int i = 0; i < familyList.size(); i++) {
+        for (int i=0;i< familyList.size();i++){
             familyList.get(i).display();
         }
 
 
     }
-
-    @Override
+ @Override
     public int findIndexById(int id) {
         return 0;
     }
 
     @Override
-    public void findIndexByaddress(String name) {
-        for (int i = 0; i < familyList.size(); i++) {
-            if (familyList.get(i).equals(name)) {
-                System.out.println(familyList.get(i));
-            }
-        }
+    public void findIndexByName(String name) {
+
+
     }
-}
+
+    @Override
+    public void printAll() {
+
+    }
+
+    }
+
